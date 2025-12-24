@@ -8,19 +8,19 @@ int randomNumberBetween(short from, short to)
         std::swap(from, to);
     return (rand() % (to - from + 1)) + from;
 }
-void generateRandomMatrix(int arr[3][3])
+void FillMatrixWithRandomNumbers(int arr[3][3])
 {
     
     for (int i = 0; i <3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            arr[i][j] = randomNumberBetween(200, 100);
+            arr[i][j] = randomNumberBetween(1, 99);
         }
     }
    
 }
-void printArray(int arr[3][3])
+void printMatrix(int arr[3][3])
 {
     for (int i = 0; i < 3; i++)
     {
@@ -36,8 +36,8 @@ int main()
 {
     srand(time(nullptr));
     int arr[3][3];
-    generateRandomMatrix(arr);
-    printArray(arr);
+    FillMatrixWithRandomNumbers(arr);
+    printMatrix(arr);
     
     return 0;
 }
